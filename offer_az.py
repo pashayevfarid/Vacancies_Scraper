@@ -103,7 +103,7 @@ for p in pages:
         deadline_li = main_content.find_all('li', class_='post__meta-item')[1]
         deadline = deadline_li.find('span', class_='post__meta-value')
         deadline = deadline.get_text(strip=True) if deadline else None
-        if posted_date: 
+        if deadline: 
             try:
                 deadline_obj = datetime.strptime(deadline, '%d.%m.%Y')
                 deadline = deadline_obj.strftime('%d/%m/%Y')
